@@ -1,0 +1,31 @@
+@import "const/const.scss";
+@import "const/mixins";
+
+body {
+  margin: 0;
+  /*font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',*/
+  /*  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',*/
+  /*  sans-serif;*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url('./img/background.png');
+  background-size: 100%;
+
+}
+
+// экраны шириной от 1440 до 2560
+@include specificBackgroundToResolution('2560px', 'body', '../img/background.png');
+// экраны шириной от 1024 до 1439
+@include specificBackgroundToResolution('1439px', 'body', '../img/background 1024.png');
+// экраны шириной от 768 до 1023
+@include specificBackgroundToResolution('1023px', 'body', '../img/background 768.png');
+// телефоны и планшеты шириной от 425 до 767
+@include specificBackgroundToResolution('767px', 'body', '../img/background 425.png');
+// телефоны шириной от 320 до 424
+@include specificBackgroundToResolution('424px', 'body', '../img/background 320.png');
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

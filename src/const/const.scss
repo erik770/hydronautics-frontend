@@ -1,3 +1,10 @@
 #root {
+  --turquoise-color: #00AEAE;
+  --dark-green-from-background: #053540;
+
   --text-color-light: white;
+
+  --btn-hover-color: var(--turquoise-color);
+  --btn-color: var(--dark-green-from-background);
+
 }

@@ -18,13 +18,19 @@ export const Navbar = () => {
 
     const [menuActive, setMenuActive] = useState(false)
     const menuOpen = () => setMenuActive(currentMenuActiveState => !currentMenuActiveState)
+
+    const navbarItemClasses = [classes.navbar__items];
+    if (menuActive) {
+        navbarItemClasses.push(classes.navbar__items_active);
+    }
+
     return (
         <nav className={classes.navbar}>
             <h1 className={classes.navbar__logo}> <img src={logo}></img></h1>
             <div className={classes['navbar__menu-icon']} onClick={menuOpen}>
                 <i className={menuActive ? 'fas fa-times' : 'fas fa-bars'} />
             </div>
-            <ul className={classes.navbar__items}>
+            <ul className={navbarItemClasses.join(' ')}>
                 {
                  MenuItems.map((item) => <li  key={item.title}> <a className={classes.navbar__item} href={item.url}>{item.title}</a></li>)
                 }

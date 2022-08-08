@@ -1,7 +1,23 @@
 @mixin adaptive-value($property, $startValue, $minValue, $maxWidthContainer) {
   $addValue: $startValue -$minValue;
   #{$property}: $startValue + px;
-  //@media (max-width: #{$maxWidthContainer +px}) {
+  @media (max-width: #{$maxWidthContainer +px}) {
     #{$property}: calc(#{$minValue + px} + #{$addValue} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
-  //}
+  }
+}
+
+@mixin specificBackgroundToResolution($maxWidth, $selector, $imgUrl) {
+  @if (#{$maxWidth} == '2560px') {
+    #{$selector} {
+      background-image: url('#{$imgUrl}');
+      background-size: 100%;
+    }
+  } @else {
+    @media screen and (max-width: #{$maxWidth}) {
+      #{$selector} {
+        background-image: url('#{$imgUrl}');
+        background-size: 100%;
+      }
+    }
+  }
 }
