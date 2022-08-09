@@ -17,6 +17,7 @@
   align-items: center;
   justify-content: space-between;
   @include adaptive-value('height', 152, 80, 1440);
+  height: 152px;
   font-size: 24px;
 
   &__logo {
@@ -40,7 +41,6 @@
     flex: 1 1;
     align-items: stretch;
     justify-content: space-evenly;
-    //@include adaptive-value('gap', 96, 10, 1440);
     gap: 15px;
     list-style: none;
 
@@ -97,7 +97,6 @@
       left: -100%;
       opacity: 0;
       transition: all 0.5s ease;
-
       &:last-child {
         padding-right: 0;
       }
