@@ -1,3 +1,5 @@
+@import "../../const/mixins";
+
 .carousel {
   width: 100%;
   height: calc(100vh - (80px + 72 * ((100vw - 320px) / (1440 - 320))));
@@ -29,20 +31,23 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-    //z-index: 1;
     filter: brightness(60%);
   }
 
   &__text {
     position: absolute;
-    right: 100px;
-    bottom: 300px;
+    right: 8%;
+    bottom: 37%;
     font-size: 64px;
+    @include adaptive-value('font-size', 85, 40, 2560);
+
     color: var(--text-color-light);
 
     & a {
       display: block;
       color: var(--turquoise-color);
+      @include adaptive-value('font-size', 70, 32, 2560);
+
       font-size: 48px;
       text-decoration: none;
       cursor: pointer;
@@ -50,12 +55,12 @@
   }
 
   &__arrows {
+    height: 6%;
     display: flex;
-    gap: 10px;
+    gap: 25%;
     position: absolute;
-    bottom: 11px;
-    left: 50px;
-    //z-index: 1;
+    bottom: 2.5%;
+    left: 5%;
   }
 }
 

@@ -18,7 +18,8 @@
   justify-content: space-between;
   @include adaptive-value('height', 152, 80, 1440);
   height: 152px;
-  font-size: 24px;
+  //font-size: 24px;
+  @include adaptive-value('font-size', 36, 16, 2560);
 
   &__logo {
     //margin: 22px 31px;
@@ -87,6 +88,7 @@
 @media screen and (max-width: 1023px) {
   .navbar {
     &__items {
+      font-size: 20px;
       display: flex;
       flex-direction: column;
       justify-content: start;
