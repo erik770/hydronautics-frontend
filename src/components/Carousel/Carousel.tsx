@@ -1,8 +1,8 @@
 import React, {FC, useState} from 'react';
 import {ICarouselItem} from "../../types/Types";
 import classes from './Carousel.module.scss';
-import right_arrow from '../../img/Carousel/right_arrow.png';
-import left_arrow from '../../img/Carousel/left_arrow.png';
+import right_arrow from '../../img/Carousel/right_arrow.svg';
+import left_arrow from '../../img/Carousel/left_arrow.svg';
 import {useSwipe} from "../../hooks/useSwipe";
 
 interface CarouselProps {
@@ -16,6 +16,7 @@ export const Carousel: FC<CarouselProps> = ({slides}) => {
     const nextSlide = () => setCurrent(current === slidesLength - 1 ? 0 : current + 1);
     const prevSlide = () => setCurrent(current === 0 ? slidesLength - 1 : current - 1);
 
+
     const [onTouchStart, onTouchMove, onTouchEnd] = useSwipe(80, nextSlide, prevSlide);
 
     const isSensorDevice = "ontouchstart" in document.documentElement;
@@ -28,6 +29,7 @@ export const Carousel: FC<CarouselProps> = ({slides}) => {
                     return (
 
                         <div
+                            key={item.imgUrl}
                             className={
                                 current === index
                                     ? [classes.carousel__item, classes.carousel__item_active].join(' ')
@@ -43,8 +45,8 @@ export const Carousel: FC<CarouselProps> = ({slides}) => {
             </div>
             {!isSensorDevice &&
               <div className={classes.carousel__arrows}>
-                <img onClick={prevSlide} src={left_arrow}></img>
-                <img onClick={nextSlide} src={right_arrow}></img>
+                <img onClick={prevSlide} alt=' ' src={left_arrow}></img>
+                <img onClick={nextSlide} alt=' ' src={right_arrow}></img>
               </div>}
         </div>
 

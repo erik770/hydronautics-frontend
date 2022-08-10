@@ -1,7 +1,7 @@
 import React, {FC, useEffect, useState} from 'react';
 import classes from "./Navbar.module.scss"
 import {MenuItems} from "../../const/MenuItems";
-import logo from '../../img/logo_with_text.png';
+import logo from '../../img/logo_with_text.svg';
 
 export const Navbar: FC = () => {
     useEffect(() => {
