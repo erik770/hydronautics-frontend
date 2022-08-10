@@ -18,6 +18,8 @@ export const Carousel: FC<CarouselProps> = ({slides}) => {
 
     const [onTouchStart, onTouchMove, onTouchEnd] = useSwipe(80, nextSlide, prevSlide);
 
+    const isSensorDevice = "ontouchstart" in document.documentElement;
+
     return (
         <div className={classes['carousel']} onTouchEnd={onTouchEnd} onTouchStart={onTouchStart}
              onTouchMove={onTouchMove}>
@@ -39,10 +41,11 @@ export const Carousel: FC<CarouselProps> = ({slides}) => {
                 })}
                 <div className={classes.carousel__text}>{slides[current].title} <a href={'#'}>подробнее</a></div>
             </div>
-            <div className={classes.carousel__arrows}>
+            {!isSensorDevice &&
+              <div className={classes.carousel__arrows}>
                 <img onClick={prevSlide} src={left_arrow}></img>
                 <img onClick={nextSlide} src={right_arrow}></img>
-            </div>
+              </div>}
         </div>
 
     );
