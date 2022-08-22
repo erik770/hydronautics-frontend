@@ -38,7 +38,7 @@ export const Carousel: FC<CarouselProps> = ({slides}) => {
                 )
 
             })}
-            <div className={classes.carousel__text}>{slides[current].title} <a href={'#'}>подробнее</a></div>
+            <div className={classes.carousel__text}>{slides[current].title} <a href={'/'}>подробнее</a></div>
             {!isSensorDevice &&
               <div className={classes.carousel__arrows}>
                 <img onClick={prevSlide} alt=' ' src={left_arrow}></img>

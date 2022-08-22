@@ -13,6 +13,11 @@
 
 
 .navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -64,10 +69,13 @@
     display: flex;
     flex: 1 1;
     padding: 1.5rem 0;
-
+    cursor: pointer;
+    &_active {
+      text-decoration: underline var(--btn-hover-color);
+      transition: all 0.4s ease;
+    }
     &:hover {
       text-decoration: underline var(--btn-hover-color);
-      //text-decoration-color:  ;
       transition: all 0.4s ease;
     }
   }
@@ -94,7 +102,7 @@
       justify-content: start;
       width: 100%;
       height: calc(100% - (80px + 72 * ((100vw - 320px) / (1440 - 320))));
-      position: absolute;
+      position: fixed;
       @include adaptive-value('top', 152, 80, 1440);
       left: -100%;
       opacity: 0;

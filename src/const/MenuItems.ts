@@ -1,22 +1,29 @@
+import {LinkStyles} from "../types/Types";
+
 export const MenuItems = [
     {
         title: 'О нас',
-        url: '#',
+        url: '/not_done',
+        linkType: LinkStyles.scroll,
     },
     {
         title: 'Проекты',
         url: '#',
+        linkType: LinkStyles.router,
     },
     {
         title: 'Команда',
-        url: '#',
+        url: '/team',
+        linkType: LinkStyles.scroll,
     },
     {
         title: 'Контакты',
-        url: '#',
+        url: '/not_done',
+        linkType: LinkStyles.scroll,
     },
     {
         title: 'История',
-        url: '#',
+        url: '/not_done',
+        linkType: LinkStyles.scroll,
     }
 ]
