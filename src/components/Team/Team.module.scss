@@ -1,0 +1,15 @@
+.team {
+  &-container {
+    display: flex;
+    padding: 0 80px;
+    flex-direction: column;
+    //justify-content: center;
+  }
+  &__header {
+    font-size: 4rem;
+    color: var(--text-color-light);
+    font-weight: 700;
+    margin-left: 2px;
+    padding-top: 72px;
+  }
+}
