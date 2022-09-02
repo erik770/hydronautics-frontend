@@ -10,6 +10,15 @@
     color: var(--text-color-light);
     font-weight: 700;
     margin-left: 2px;
+    margin-bottom: 70px;
     padding-top: 72px;
+  }
+
+  &__members{
+    color: var(--text-color-light);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
   }
 }

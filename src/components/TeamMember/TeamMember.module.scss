@@ -1,0 +1,30 @@
+.member {
+  flex: 1 1;
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.75rem;
+
+  &__image {
+    max-width: 370px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
+
+  &__name {
+    font-size: 2rem;
+    text-decoration: underline;
+  }
+
+  &__surname {
+    font-size: 2rem;
+    text-decoration: underline;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    width: 80%;
+  }
+}
