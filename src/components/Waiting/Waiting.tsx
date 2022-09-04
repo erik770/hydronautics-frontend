@@ -11,10 +11,7 @@ export const Waiting = () => {
                     <span className={['far', 'fa-question-circle', 'fa-spin', classes['zero-spin']].join(' ')}></span>
                     <span>4</span>
                 </div>
-                <div className={classes.error__text}>Maybe this page moved? Got deleted? Is hiding out in quarantine?
-                    Never existed in
-                    the first
-                    place?<p>Let's go <Link to="/posts">home</Link> and try from there.</p></div>
+                <div className={classes.error__text}>Упсии, данный раздел разработчики пока не сделали.</div>
             </div>
         </div>
     );
