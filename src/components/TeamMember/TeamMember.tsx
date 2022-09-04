@@ -8,7 +8,7 @@ export const TeamMember: FC<ITeamMember> = ({name, surname, role, imgUrl, text})
             <img className={classes.member__image} src={imgUrl} alt=""/>
             <div className={classes.member__name}>{name}</div>
             <div className={classes.member__surname}>{surname}</div>
-            <div className={classes.member__role}>{role}</div>
+            <div >{role}</div>
             <div className={classes.member__text}>{text}</div>
         </div>
     );

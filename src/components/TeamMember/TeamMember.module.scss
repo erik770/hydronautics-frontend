@@ -1,25 +1,37 @@
+@import "../../const/mixins";
+
 .member {
   flex: 1 1;
   text-align: center;
   display:flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  font-size: 1.75rem;
+  @include adaptive-value('font-size', 28, 16, 1440);
+  cursor: default;
 
+  &:hover {
+    & .member__name {
+    text-decoration: underline var(--btn-hover-color);
+    }
+    & .member__surname{
+      text-decoration: underline var(--btn-hover-color);
+    }
+  }
   &__image {
-    max-width: 370px;
+    @include adaptive-value('max-width', 380, 270, 1440);
     border-radius: 20px;
     margin-bottom: 10px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
   }
 
   &__name {
-    font-size: 2rem;
+    @include adaptive-value('font-size', 32, 18, 1440);
     text-decoration: underline;
   }
 
   &__surname {
-    font-size: 2rem;
+    @include adaptive-value('font-size', 32, 20, 1440);
     text-decoration: underline;
     margin-bottom: 20px;
   }

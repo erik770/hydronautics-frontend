@@ -1,17 +1,21 @@
+@import "../../const/mixins";
+
 .team {
   &-container {
     display: flex;
-    padding: 0 80px;
+    padding: 0 5%;
     flex-direction: column;
-    //justify-content: center;
   }
   &__header {
-    font-size: 4rem;
+    @include adaptive-value('font-size', 72, 30, 1440);
+    @include adaptive-value('padding-top', 85, 30, 1440);
+    @include adaptive-value('margin-bottom', 72, 30, 1440);
     color: var(--text-color-light);
     font-weight: 700;
-    margin-left: 2px;
-    margin-bottom: 70px;
-    padding-top: 72px;
+    margin-left: 5%;
+    @media screen and (max-width: 750px) {
+        text-align: center;
+    }
   }
 
   &__members{

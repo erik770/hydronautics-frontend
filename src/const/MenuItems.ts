@@ -8,7 +8,7 @@ export const MenuItems = [
     },
     {
         title: 'Проекты',
-        url: '#',
+        url: '/projects',
         linkType: LinkStyles.router,
     },
     {
