@@ -7,14 +7,13 @@ import {CarouselItems} from "./const/CarouselItems";
 import {BrowserRouter} from "react-router-dom";
 import {Team} from "./components/Team/Team";
 import {TeamMembers} from "./const/TeamMembers";
+import AppRouter from "./components/AppRouter";
 
 function App() {
     return (
         <BrowserRouter>
             <Navbar/>
-            <Carousel slides={CarouselItems}/>
-            <Team members ={TeamMembers}/>
-            <Waiting />
+            <AppRouter/>
         </BrowserRouter>
     );
 }

@@ -1,10 +1,11 @@
 import React from 'react';
+import {Waiting} from "../components/Waiting/Waiting";
 
 const ProjectsPage = () => {
     return (
-        <div>
-            
-        </div>
+        <>
+            <Waiting />
+        </>
     );
 };
 

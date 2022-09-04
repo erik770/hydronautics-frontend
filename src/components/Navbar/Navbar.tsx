@@ -39,7 +39,7 @@ export const Navbar: FC = () => {
                     MenuItems.map((item) => <li key={item.title} >
                         {item.linkType === LinkStyles.scroll
                             ?
-                            <LinkS spy={true} smooth={true} onClick={menuClose} offset={-150} duration={500} className={classes.navbar__item}
+                            <LinkS spy={true} smooth={true} onClick={menuClose} offset={-80} duration={500} className={classes.navbar__item}
                                    activeClass={classes.navbar__item_active} to={item.url}>{item.title}</LinkS>
                             : <LinkR onClick={menuClose} className={classes.navbar__item} to={item.url}>{item.title}</LinkR>}
                     </li>)
